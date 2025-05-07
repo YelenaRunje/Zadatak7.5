@@ -18,7 +18,7 @@ public static void main(String[] args) {
             System.out.println("Transakcija uspješno izvršena.");
 
         } catch (SQLException e) {
-            connection.rollback();  // Rollback u slučaju greške
+            connection.rollback();
             System.err.println("Greška u transakciji. Promjene poništene.");
             e.printStackTrace();
         }
@@ -55,7 +55,5 @@ BEGIN CATCH
     ROLLBACK;
     PRINT 'Greška u transakciji';
 END CATCH;
-
-
 
 */
